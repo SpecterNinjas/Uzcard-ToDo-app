@@ -1,4 +1,5 @@
 # Uzcard-ToDo-app
+<strong>Description:</strong></br>
 Simple ToDo app with an integrated set of Django applications addressing authentication, registration, account management as well as 3rd part social account authentication.
 
 <strong>Requrement list:</strong></br>
@@ -26,5 +27,5 @@ Simple ToDo app with an integrated set of Django applications addressing authent
 <strong>Admin Page:</strong></br>
 Goto: http://127.0.0.1:8000/admin/login/?next=/admin/</br>
 
-Username:azam </br>
-Password:Shilpildoq99#
+Username: azam </br>
+Password: Shilpildoq99#
