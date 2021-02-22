@@ -1,0 +1,26 @@
+{% load socialaccount %}
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'main' %}">Todo App</a>
+
+    <ul class="nav">
+        {% if user.is_authenticated %}
+             <li class="nav-item">
+                <a class="nav-link"><span class="text-white">Hi, {{ user.username }}</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}"><span class="text-white">Logout</span></a>
+            </li>
+        {% else %}
+             <li class="nav-item">
+                 <button class="btn btn-info"> <a href="{% provider_login_url 'google' %}"><span class="text-white">Login With Google</span></a></button>
+             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}"><span class="text-white">Sign Up</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}"><span class="text-white">Login</span></a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

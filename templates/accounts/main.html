@@ -1,0 +1,77 @@
+{% extends "accounts/my_base.html" %}
+{% load crispy_forms_filters %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!--title block-->
+{% block title %}Todo App {% endblock %}
+
+{% block body %}
+
+    {% include 'accounts/navbar.html' %}
+    <div class="container">
+        <div class="container col-sm-8 col-sm-offset-2">
+            <div id="taskApp">
+
+                <!--          adding new task form-->
+                <div class="panel panel-default mt-5">
+                    <h2 class='text-center mb-5'>Add New Task</h2>
+
+                    <form method="post" action="" autocomplete="off">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-9">
+                                {{ form|crispy }}
+                            </div>
+
+                            <div class="col-md-3">
+                                <input type="submit" value='Add' class='btn btn-outline-info btn-block'>
+                            </div>
+                        </div>
+                    </form>
+                    &nbsp;
+                </div>
+                {% if all_tasks %}
+                    <table class="table">
+                        <thead>
+                        <th><strong>#</strong></th>
+                        <th>Task</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        </thead>
+
+                        <tbody>
+
+                        {% for task in all_tasks %}
+                            <tr>
+
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ task }}</td>
+                                <td>
+
+                                    <a href="{% url 'task_edit' task.id %}">
+                                        <button type="submit" class="btn btn-info">edit</button>
+                                    </a>
+
+                                </td>
+                                <td>
+
+                                    <a href="{% url 'task_delete' task.id %}">
+                                        <button type="submit" class="btn btn-danger">delete</button>
+                                    </a>
+
+                                </td>
+
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
+                {% else %}
+                    <h5>Sorry, your task list is empty.</h5>
+                {% endif %}
+        </div>
+    </div>
+
+{% endblock body %}
