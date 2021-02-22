@@ -27,5 +27,5 @@ Simple ToDo app with an integrated set of Django applications addressing authent
 <strong>Admin Page:</strong></br>
 Goto: http://127.0.0.1:8000/admin/login/?next=/admin/</br>
 
-Username: azam </br>
-Password: Shilpildoq99#
+Username: <em>azam</em> </br>
+Password: <em>Shilpildoq99#</em>
