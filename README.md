@@ -7,7 +7,7 @@ Requrement list:
 3.pip install django-allauth (3rd party authentication - Google,Facebook,VK, etc)
 
 
-Main Components:
+<strong>Main Components:</strong>
 -TODO app that implements all CRUD (Create, Read, Update, Delete) functions
 -Registration(email, username, password)
 -Login (username, password, remember_me (for session))
