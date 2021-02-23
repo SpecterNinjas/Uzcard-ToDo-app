@@ -28,6 +28,6 @@ Simple ToDo app with an integrated set of Django applications addressing authent
 Goto: http://127.0.0.1:8000/admin/login/?next=/admin/</br>
 
 Username: <em>SECRET</em> </br>
-Password: <em>SECRET#</em>
+Password: <em>SECRET</em>
 
 For further info, feel free to contact: nurullayevazam4@gmail.com
